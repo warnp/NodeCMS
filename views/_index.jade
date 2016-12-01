@@ -1,0 +1,48 @@
+doctype html
+html
+    include includes/head
+    body(data-spy="scroll", data-offset="0")
+
+        div#cont.container-fluid()
+
+            include includes/pageHeader
+
+            //div#header.row(class="mastHead slide", data-0="background-position: 50% 50%",data-100="", data-200="background-position: 50% 30%" )
+            div#pageContent()
+                div#header.row(class="mastHead slide")
+                    div.col-md-12(class="mastHeadText ")
+                        div.col-md-6(class="col-md-offset-2")
+                            h1 Romain ASSIÉ
+                                br
+                                h3 Développeur C#/C++
+
+                br
+
+                div#content.container-fluid(class="row")
+                    div.row
+                        div.col-md-4(class="col-md-offset-2")
+                            h3.text-center Bio
+                            p.text-justify Cela fait maintenant près de dix que je programmes des logiciels. Après avoir commencé par le C/C++, je me suis tourné vers les technologies Microsoft et les dernières technologies web.
+
+                        div.col-md-4
+                            h3.text-center Motivations
+                            p.text-justify Amouteux des choses bien conçues, j'aime vraiment les projets représentant un challenge, demandant de la persévérance et de l'audace.
+
+
+            //div#technos.container-fluid
+                div.row
+                    div.col-md-8(class="col-md-offset-2")
+                        h3.text-center Ici les technos
+
+            //div#Portfolio.container-fluid
+                div.row
+                    div.col-md-8(class="col-md-offset-2")
+                        h3.text-center Ici le portfolio
+
+            //div#CV.container-fluid
+                div.row
+                    div.col-md-8(class="col-md-offset-2")
+                        h3.text-center Ici le portfolio
+
+        include includes/pageFooter
+    include includes/foot

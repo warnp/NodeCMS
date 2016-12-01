@@ -1,0 +1,9 @@
+- var i = 0
+each art in articles 
+	- i++
+	if( i  == 0)
+		div.row(class="tileRow")
+	else
+			div.col-md-3
+				div.sheet(style="background-color: #90caf9; display: block")
+					h2= art.title	

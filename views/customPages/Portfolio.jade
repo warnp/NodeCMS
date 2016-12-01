@@ -1,0 +1,59 @@
+//POrtfolio mosaic
+div.row
+                    //div#sideNav(class="text-right col-md-2")                
+                        div
+                            ul.list-unstyled 
+                                li
+                                    //-a#navDisplay(href="#")
+                                        //-i( class="fa fa-bars fa-2x")
+
+                                li
+                                    a#navHome(href="#") 
+                                        i( class="fa fa-arrow-left fa-2x")
+                        div
+                            ul.list-unstyled
+                                each art in articles
+                                    each x in art
+                                        li.item(id="link_"+x._id,class="sheet sideOption", style="background-color:"+x.colorTheme+";")
+                                            div(style="background-color:"+x.colorTheme+";")
+                                                h4.text-left= x.title
+                    div#panel()
+                                - var i = 0;
+                                
+                                each art in articles
+                                  - var len = art.length
+                                   if len > 0
+                                        while i < len 
+                                          div.row(class="tableRow")
+                                            if art[i]
+                                              div(id="tile"+i+"_"+art[i]._id, class="col-md-4 item sheet")
+                                                      div.item-content(class="container-fluid",style="background-color: "+art[i].colorTheme+";  display: block")
+                                                          h2.text-center= art[i].title
+                                                          div.image-tile
+                                                              if art[i].image
+                                                                  img.img-responsive(class="center-block",src="images/"+art[i].image)
+                                              - i = i +1
+                                            if art[i]
+                                              div(id="tile"+i+"_"+art[i]._id , class="col-md-4 item sheet")
+                                                      div.item-content(class="container-fluid",style="background-color: "+art[i].colorTheme+";  display: block")
+                                                          h2.text-center= art[i].title
+                                                          div.image-tile
+                                                              if art[i].image
+                                                                  img.img-responsive(class="center-block",src="images/"+art[i].image)
+
+                                              - i = i+1
+                                            if art[i]
+                                              div(id="tile"+i+"_"+art[i]._id, class="col-md-4 item sheet")
+                                                      div.item-content(class="container-fluid",style="background-color: "+art[i].colorTheme+";  display: block")
+                                                          h2.text-center= art[i].title
+                                                          div.image-tile
+                                                              if art[i].image
+                                                                  img.img-responsive(class="center-block",src="images/"+art[i].image)
+
+                                              - i = i+1
+                                    else
+                                        h3 Aucun article présent
+
+                    
+                    div#articlePres
+

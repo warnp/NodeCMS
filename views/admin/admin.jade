@@ -1,0 +1,57 @@
+doctype html
+html
+    include includes/headerAdmin
+
+    body
+
+        nav(class="navbar navbar-default navbar-fixed-top", role="navigation")
+            div.container-fluid
+                div.navbar-header
+                    a.navbar-brand(href="#") Administration
+                div(class="navbar-collapse collapse")
+                    ul(class="nav navbar-nav")
+                        li
+                            a#catHome(href="#")
+                                strong Pages manager
+                        li
+                            a#pagBtn(href="#") Pages
+                        li
+                            a#catBtn(href="#") Categories
+                        li
+                            a#artBtn(href="#") Articles
+                        li
+                            a#galBtn(href="#") Gallerie
+                        li
+                            a(href="#") Logout
+
+        div.container-fluid
+
+            div.row(class="adminContent")
+
+
+
+
+                //select(class="selectpicker", name="cheminImage",data-live-search="true")
+                    each x in images
+                        option= x
+
+                div(class="col-sm-3 col-md-2 sidebar")
+                    ul(class="nav nav-sidebar")
+                        each cat in  category
+                            each x in cat
+                                li
+                                    a= x.name
+
+
+
+                div(id="management", class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main", style="margin-top: 70px;")
+
+
+                  
+
+                    div
+
+
+
+                      
+    include includes/footerAdmin

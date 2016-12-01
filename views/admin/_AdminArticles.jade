@@ -1,0 +1,72 @@
+form#art(class="panel panel-primary", role="form", action="admin/insertArticle")
+                        div.panel-heading
+                            h2.panel-title Article
+                        div.panel-body
+                            label Catégorie :
+                            select#category.form-control(class="selectible", name="category")
+                                each val in categories
+                                    each x in val
+                                        option(value="#{x._id}")= x.name
+                            br
+                            label Nom de l'article :
+                            input#title.form-control(type="text", name="title")
+                            br
+                            label Header (Non fonctionnel pour le moment):
+                            textarea#header.form-control
+                            br
+                            label Contenu :
+                            br
+                            textarea#content.form-control(name="content")
+                            br
+                            label Séléctionner une image :
+                            br
+                            //div.radio
+                                |Couleur hexa
+                                input(type="radio" name="background" value="color" checked="checked")
+                            //input.form-control(type="text", name="colorHexa" value="#000000")
+                            //br
+                            //div.radio
+                                |Nom image
+                                input(type="radio" name="background" value="image")
+                            select#selectImage.form-control
+                                each i in images
+                                    option= i
+
+                            br
+                            label Sélectionner une couleur de thème
+                            select#colorTheme.form-control(name="colorTheme")
+                                each val, index in { 'Red': '#f44336','Pink':"#e91e63",'Purple':'#9c27b0','Deep purple':'#673ab7','Indigo':'#3f51b5','Blue':'#2196f3','Light blue':'#03a9f4','Cyan':'#00bcd4','Teal':'#009688','Green':'#4caf50','Light green':'#8bc34a','Lime':'#cddc39','Yellow':'#ffeb3b','Amber':'#ffc107','Orange':'#ff9800','Deep orange':'#ff5722','Brown':'#795548','Grey':'#9e9e9e','Blue grey':'#607d8b','Black':'#000000','White':'#ffffff' }
+                                    option(value=val)= index
+                            br
+                            label Page
+                            select.form-control(name="page")
+                                each page in pages
+                                    each x in page
+                                        option(value="#{x._id}")= x.name
+
+                            br
+                            a#addArticleButton(class="btn btn-lg btn-primary pull-right", type="submit", value="ajouter un article") Ajouter un article
+
+
+
+
+div.panel-group#accordion(role="tablist" aria-multiselectable="true")
+   each art in articles
+      each x in art
+         div.panel(class="panel-default")
+            div.panel-heading(role="tab", id="heading#{x._id}")
+               h4.panel-title
+                  a(data-toggle="collapse", data-parent="#accordion", href="#collapse#{x._id}", aria-expanded="true", aria-controls="collapse#{x._id}")= x.title
+            div.panel-collapse(id="collapse#{x._id}", class="collapse", role="tabpanel", aria-labelleby="heading#{x._id}")
+               div.panel-body
+                    label Contenu :
+                    - var content = x.content
+                    p !{content}
+                    if x.image
+                        p
+                            label Image :
+                            img(src="images/"+x.image)
+                    a.btn(href="#", class="btn-primary edit-articles") Editer
+                    a.btn(href="#", class="btn-primary delete-articles") Supprimer
+
+

@@ -1,0 +1,44 @@
+
+div#navbar-main
+
+    div(class="navbar  navbar-static-top entireNavBar", role="navigation")
+        div.container
+
+            div(class="navbar-collapse collapse navigationBar")
+                
+
+                //a#navHome.navbar-brand(class="glyphicon glyphicon-tag", href="#")
+                    //img(alt="Brand")
+                ul(class="nav navbar-nav navigation")
+                    li#navHome.btnBrand
+                        span
+                    each p in pages
+                        each val in p
+                            if val.name === "Blog"
+                                li
+                                    a(id="Blog_Blog", href="http://blog.assie.io") Blog
+                            else
+                                li
+                                    a.smoothScroll(id= val.name+"_"+val.templateName, href="#")= val.name
+                //div.container-fluid
+                    form(class="navbar-form navbar-right", role="search")
+                        div.form-group
+                            input.form-control(type="text", placeholder="search")
+                        button(type="submit", class="btn btn-default") Go!
+
+
+    //div(class="navbar navbar-fixed-top entireNavBarMoving", data-top="visibility: hidden;", data-30="visibility: visible; opacity: 0;" data-200="opacity: 1")
+        div.container
+
+            div(class="navbar-collapse collapse")
+                a.navbar-brand(class="glyphicon glyphicon-tag", href="#")
+                    //img(alt="Brand")
+                ul(class="nav navbar-nav")
+                    each val in ["CV","Portfolio","Technologies","Blog","Contact"]
+                        li
+                            a.smoothScroll(id= val, href="#")= val
+                //div.container-fluid
+                    form(class="navbar-form navbar-right", role="search")
+                        div.form-group
+                            input.form-control(type="text", placeholder="search")
+                        button(type="submit", class="btn btn-default") Go!

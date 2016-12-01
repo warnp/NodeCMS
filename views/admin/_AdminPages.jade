@@ -1,0 +1,38 @@
+//
+   Created by romain on 15/03/2015.
+
+div.panel-group#accordion(role="tablist" aria-multiselectable="true")
+      each x in pages
+        if x.length > 0
+          each p in x
+             div.panel(class="panel-default")
+                div.panel-heading(role="tab", id="heading"+ p._id )
+                   h4.name
+                      a.accordionTitle(data-toggle="collapse", data-parent="#accordion", href="#collapse_"+ p._id , aria-eppanded="true", aria-controls="collapse_"+ p._id )= p.name
+    
+                div.panel-collapse(id="collapse"+ p._id , class="collapse", role="tabpanel", aria-labelleby="heading_"+ p._id )
+                   div.panel-body
+                      label Template
+                      p= p.templateName
+        else
+           h2 Il n'y a pas de page
+
+ //  div#cat(class="panel panel-primary")
+      div.panel-heading
+         h2.panel-title Page
+      div.panel-body
+         label Nom de la Page :
+         input.form-control#pageName(type="text", name="name")
+
+         label Page template :
+
+         div.row-fluid
+            select#templateName(name="templateName", class="selectible",  data-size="false")
+               each val in ['Blog','CV','Portfolio']
+                  //Mettre val.uploadName et val.name
+                  option(value=val)=val
+
+
+
+
+         a#addPageBtn(class="btn btn-lg btn-primary pull-right", href="#") ajouter une page

@@ -1,0 +1,13 @@
+doctype html
+html
+    include ../../includes/head
+    body(data-spy="scroll", data-offset="0")
+
+        div#cont.container-fluid()
+
+            include ../../includes/blog/headerBlog
+            div#pageContent.container
+                h1= article.title
+                p !{article.content}
+        include ../../includes/pageFooter                                
+    include ../../includes/foot

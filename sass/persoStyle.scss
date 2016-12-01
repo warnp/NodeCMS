@@ -1,0 +1,413 @@
+$btnBrandBg: transparent;
+$btnBrandColor: #000;
+$btnBrandColorLight: #fff;
+$duration: 0.5s;
+
+pre{
+    background-color: transparent;
+    border: 0 solid transparent;
+}
+
+.articlePres{
+	display: none;
+}
+
+#sideNav{
+    display:none;
+    left: -210px;
+    /*left: -0px;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 20px;
+    position: fixed;
+    top: 51px;
+    bottom:0;
+}
+
+.grid-sizer{
+		width: 310px;
+		/*max-width: 310px;*/
+		/*min-width:310px;*/
+
+}
+
+@media screen and (min-width: 1200px){
+       	.grid-sizer{
+		width: 310px;
+		/*max-width: 310px;*/
+		/*min-width:310px;*/
+
+} }
+
+@media screen and (max-width: 768px){
+	.grid-sizer{
+		width: 310px;
+		/*max-width: 310px;*/
+		    /*min-width:310px;*/
+	}
+}
+
+@media screen and (max-width: 320px){
+	.grid-sizer{
+		width: 310px;
+		/*max-width: 310px;*/
+		    /*min-width:310px;*/
+	}
+}
+
+.gutter-sizer{
+	width: 2px;
+
+
+}
+
+.sideOption{
+    left: -20px;
+    max-width: 210px;
+    padding: 5px;
+    cursor:pointer;
+}
+
+.sheet
+{
+    /*margin:0px 2px ;*/
+    /*margin: 2px 2px;*/
+    z-index: initial;
+    position: relative;
+    /*margin: 10px;*/
+    overflow: hidden;
+    
+    padding: 15px ;
+    /*max-width: 310px;*/
+    /*min-width: 310px;*/
+    
+    /*height: 230px;*/
+    /*margin-bottom: 2px;*/
+    
+
+}
+
+.tableRow{
+    padding: 5px;
+
+}
+
+.item-content{
+	max-height: 210px;
+	max-width: 290px;
+    /*margin-left: -15px;*/
+    /*margin-right: -15px;*/
+    cursor: pointer;
+    box-shadow: 0px 0px 00px 0px #ffffff;
+    transition: box-shadow 0.2s ease;
+}
+
+.item-content:hover
+{
+    z-index: 9999;
+    box-shadow: 0px 0px 5px 5px #777777;
+    /*animation: shadowEase 1s ease forward;*/
+    /*animation-timing-function: ease;*/
+
+    /*box-shadow: 0px 0px 20px 10px #777777;*/
+
+}
+
+.img-responsive
+{
+	padding-top: 30px;
+    max-height: 70%;
+    height: auto;
+    max-width: 70%;
+    width: auto;
+
+
+}
+
+#panel{
+	margin: 0 auto;
+	width: auto;
+
+}
+
+.image-tile
+{
+    margin: 5px;
+    height: 150px;
+}
+
+@keyframes shadowEase {
+    from{ box-shadow: 0px 0px 00px 0px #ffffff; }
+    to{ box-shadow: 0px 0px 10px 5px #777777;}
+}
+
+@keyframes firstShow {
+    from{}
+}
+
+
+
+body{
+    height: 100%;
+}
+
+.mastHeadText
+{
+    margin-top: 370px;
+    color: white;
+    position: relative;
+
+}
+
+.mastHead
+{
+
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/header_bg.jpg) no-repeat center center;
+    /*background-repeat: repeat-x;*/
+    /*height: 100%;*/
+    /*width: auto;*/
+
+    /*background-size: 100%;*/
+    margin-top: 00px;
+
+    z-index: -1;
+    /*background: linear-gradient(rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 100%);*/
+
+    background-size: cover;
+    /*-webkit-transform: translate(0,100);*/
+    /*transform: translate(0,100%);*/
+
+}
+
+#cont{
+    /*height: 100%;*/
+
+}
+
+.slide{
+    /*height: 100%;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 50%;*/
+    /*height: 200%;*/
+
+}
+
+#content
+{
+    /*height: 100%;*/
+    /*transform: translate(0,100%);*/
+
+}
+
+#header
+{
+    /*height: 100%;*/
+    /*transform: translate(0,100%);*/
+}
+
+.footer
+{
+    /*background-color: #f9f9f9;*/
+    /*border-top: 1px solid #e5e5e5;*/
+    color: #999;
+    /*position: absolute;*/
+    height: 60px;
+    width: 100%;
+
+    bottom: 0;
+    /*text-align: center;*/
+}
+
+.container{
+    /*margin: 20px 0;*/
+    padding: 0 100px;
+}
+
+.thumbnail
+{
+    border: 0px solid #ffffff;
+    border-radius: 4px;
+
+}
+
+.thumbnail img{
+
+    max-height: 200px;
+}
+
+.article-element
+{
+    margin-bottom: 10px;
+    /*padding-bottom: 20px;*/
+    border: 1px solid #ffffff;
+    /*transition: box-shadow .2s ease-in-out;*/
+    /*border-radius: 4px;*/
+    /*cursor: pointer;*/
+
+    /*transition: border-color 0.5s ease;*/
+
+}
+
+.article-element:hover
+{
+
+    /*cursor: pointer;*/
+    
+    /*box-shadow: 3px 3px 9px #888888;*/
+}
+
+
+
+a
+{
+    color: Black;
+    /*font-weight: bold;*/
+}
+
+a:hover
+{
+    color: black;
+    /*font-weight: bold;*/
+}
+
+a:focus
+{
+    color: black;
+    /*font-weight: normal;*/
+}
+
+a.navbar-nav
+{
+    color: white;
+}
+
+.navigationBar > ul > li > a
+{
+    color: black;
+}
+.navigationBar > ul > li > a:hover
+{
+    color: black;
+}
+
+.entireNavBarMoving
+{
+    background-color: rgba(227,227,227,0.95) ;
+    box-shadow: 0px 2px 5px #888888;
+
+}
+
+.nav > li > a:hover, .nav > li > a:focus
+{
+    color: #000000;
+}
+
+.entireNavBar{
+    margin: 0 -20px;
+}
+
+
+
+.btnBrand{
+    cursor: pointer;
+    width: 54px;
+    height: 54px;
+    position: relative;
+    background-color: $btnBrandBg;
+    border-radius: 50%;
+
+    span{
+        position: absolute;
+        display:block;
+        width: 22px;
+        height: 2px;
+        top: 50%;
+        left: 50%;
+
+        transform: translateX(-50%) translateY(-50%);
+
+        background-color: $btnBrandColor;
+
+
+        &::before, &::after{
+            content:'';
+
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            display: block;
+            width: 22px;
+            height: 2px;
+
+            background-color: $btnBrandColor;
+
+            transform: translateY(-6px);
+            transition: transform $duration;
+        }
+
+        &::after{
+            
+            transform: translateY(6px);
+        }
+    }
+
+    &:hover{
+        span::before{
+            transform: translateY(-8px);
+        }
+
+        span::after{
+            transform: translateY(8px);
+        }
+    }
+
+    span::before, span::after{
+        transform-origin: 0% 50%
+    }
+
+
+    transition: transform $duration;
+
+    span::before, span::after{
+	    right: 0;
+	    left: auto;
+	    transform-origin: 100% 50%;
+    }
+    span, span::after, span::before{
+        transition: background $duration, transform $duration, width $duration;
+	
+	    /*background-color: $btnBrandColorLight;*/
+    }
+
+    &.is-open{
+	transform: rotate(-180deg);
+             
+	span{
+	    background-color: $btnBrandColorLight;
+		
+	}
+
+        span::before{
+		width:50%;
+            transform: translateY(0) rotate(45deg);
+	    background-color: $btnBrandColorLight;
+        }
+        
+        span::after{
+		width: 50%;
+	    transform: translateY(0) rotate(-45deg);
+	    background-color: $btnBrandColorLight;
+        }
+
+    }
+}
+
+h2{
+	 text-overflow: ellipsis;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+}

@@ -1,0 +1,18 @@
+//
+   Created by romain on 24/09/2014.
+
+div(class="col-md-8 col-md-offset-2")
+    div.row(class="article-element" ng-repeat="article in articleList")
+        div.col-sm-12
+            div.row
+                div.col-sm-6
+                    a.thumbnail(href="#")
+                        img(src="images/IMG_2470.jpg")
+                div.col-sm-6
+                    div
+                        h3
+                            a(href="#") {{article.title}}
+                        h5
+                            small {{article.date}}
+                    div
+                        p {{article.content}}

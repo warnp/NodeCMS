@@ -1,0 +1,21 @@
+div.container-fluid(class="allContent",style="padding-bottom: 40px;")
+    div(class="col-md-8 col-md-offset-2")
+    each x in articles
+        if x.length == 0
+            h2 Désolé, il n'y a pas d'articles ici!
+        else
+            each a in x
+                div.row(id=a._id, class="article-element" )
+                    div.col-md-12
+                        div.row
+                            div.col-md-6
+                                a.thumbnail(class="img-lnk", href="http://blog.assie.io/"+a._id)
+                                    img(src="images/"+a.image)
+                            div.col-md-6
+                                div
+                                    h3
+                                        a(class="articleTitle" href="http://blog.assie.io/"+a._id)= a.title
+                                    h5
+                                        small= a.date
+                                //div
+                                    p(class="articleContent")= a.content

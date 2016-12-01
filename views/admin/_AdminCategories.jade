@@ -1,0 +1,51 @@
+//
+   Created by romain on 06/03/2015.
+
+div.panel-group#accordion(role="tablist" aria-multiselectable="true")
+   each cat in category
+      each x in cat
+         div.panel(class="panel-default")
+            div.panel-heading(role="tab", id="heading#{x._id}")
+               h4.panel-title
+                  a.accordionTitle(data-toggle="collapse", data-parent="#accordion", href="#collapse#{x._id}", aria-expanded="true", aria-controls="collapse#{x._id}")= x.name
+            div.panel-collapse(id="collapse#{x._id}", class="collapse", role="tabpanel", aria-labelleby="heading#{x._id}")
+               div.panel-body
+                  p= x.metatype
+                  div.artList(class="container")
+  div#cat(class="panel panel-primary",method="post", role="form", action="admin/insertCategory")
+            div.panel-heading
+               h2.panel-title Catégorie
+            div.panel-body
+               label Nom de la catégorie :
+               input#name.form-control(type="text", name="name")
+
+               label [Optionnel] Métatype :
+               input#metatype.form-control(type="text", name="metatype")
+
+               label [Optionnel] Image header :
+
+               div#headerImage.row-fluid
+                  select(name="headerImage", class="selectible",  data-size="false")
+                     each val in images
+                        //Mettre val.uploadName et val.name
+                        option(value=val)=val
+
+               label [Optionnel] Titre header :
+               input#headerTextTitle.form-control(type="text", name="headerTextTitle")
+
+               label [Optionnel] Desciption header :
+               input#headerDesc.form-control(type="text", name="headerDesc")
+
+               select.form-control#templateName(name="templateName", class="selectible",  data-size="false")
+                   each val in ['Blog','CV','Portfolio']
+                      //Mettre val.uploadName et val.name
+                      option(value=val)=val
+
+               a#addCatBtn(class="btn btn-lg btn-primary pull-right",href="#") ajouter une catégorie
+
+
+
+script $('.selectible').selectpicker( 'deselectAll');
+
+style .open > .dropdown-menu {   display: block; top: 0%; min-width: 400px; min-height:300px;}
+

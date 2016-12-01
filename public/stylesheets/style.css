@@ -1,0 +1,126 @@
+
+
+body, html {
+  /*padding: 50px;*/
+  /*width: 100%;*/
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+}
+a {
+  color: black;
+}
+
+ul{
+    list-style-type:none;
+}
+
+.button
+{
+    float: left;
+    padding: 10px;
+}
+
+main{
+    overflow-x: hidden;
+
+}
+
+#nav{
+    background-color: #150015;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: bold;
+    position: fixed;
+    z-index: 999;
+    /*float: left;*/
+}
+
+.cont
+{
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+/* CSS */
+.hsContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.hsContent {
+    left: 30%;
+    max-width: 700px;
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+.bcg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.hsContent h2 {
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    color: #fff8de;
+    font-size: 35px;
+    line-height: 38px;
+    margin-bottom: 12px;
+    padding: 10px 5px;
+}
+
+
+/* Slide 1 */
+#slide-1 .bcg {background-image:url('../images/header_bg.jpg')}
+
+/* CSS - Slide 2 */
+#slide-2 .bcg {background-image:url('../images/IMG_2469.jpg')}
+#slide-2 .hsContent{
+    margin-left: -450px;
+    top: auto;
+}
+#slide-2 h2{
+    position: fixed;
+    top: 70%;
+}
+
+/*CSS Slide 3 */
+#slide-3 .bcg{
+    background-image: url('../images/header_bg.jpg');
+}
+#slide-3 .hsContent{
+    margin-left: -239px;
+}
+#slide-3 h2{
+    background-color: rgba(0,0,0,0.6) ;
+    color: #f2ead6;
+}
+
+/* Slide 4 */
+#slide-4 .bcg {background-image:url('../images/IMG_2470.jpg')}
+#slide-4 .hsContent {
+    margin-left: -450px;
+    position: fixed;
+    top: 250px;
+}
+#slide-4 h2 {
+    background: none repeat scroll 0 0 rgba(0,0,0,0);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+
+
